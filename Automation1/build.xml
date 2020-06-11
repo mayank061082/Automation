@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="Automation1">
+    <property environment="env"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <path id="Maven Dependencies.libraryclasspath">
+        <pathelement location="../../.m2/repository/org/apache/poi/poi/3.17/poi-3.17.jar"/>
+        <pathelement location="../../.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar"/>
+        <pathelement location="../../.m2/repository/org/apache/commons/commons-collections4/4.1/commons-collections4-4.1.jar"/>
+        <pathelement location="../../.m2/repository/org/apache/poi/poi-ooxml/3.17/poi-ooxml-3.17.jar"/>
+        <pathelement location="../../.m2/repository/org/apache/poi/poi-ooxml-schemas/3.17/poi-ooxml-schemas-3.17.jar"/>
+        <pathelement location="../../.m2/repository/org/apache/xmlbeans/xmlbeans/2.6.0/xmlbeans-2.6.0.jar"/>
+        <pathelement location="../../.m2/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar"/>
+        <pathelement location="../../.m2/repository/com/github/virtuald/curvesapi/1.04/curvesapi-1.04.jar"/>
+    </path>
+    <path id="Automation1.classpath">
+        <pathelement location="target/classes"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.Arr.classpath">
+        <path refid="Automation1.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.B.classpath">
+        <path refid="Automation1.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.Fileread.classpath">
+        <path refid="Automation1.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.Filereader.classpath">
+        <path refid="Automation1.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.m2.classpath">
+        <path refid="Automation1.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.StuddentPercentage.classpath">
+        <path refid="Automation1.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.Sum.classpath">
+        <path refid="Automation1.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.T1.classpath">
+        <path refid="Automation1.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.TC_02.classpath">
+        <path refid="Automation1.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="target/classes"/>
+        <copy includeemptydirs="false" todir="target/classes">
+            <fileset dir="src">
+                <include name="**/*.java"/>
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="target/classes"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="target/classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <include name="**/*.java"/>
+            <classpath refid="Automation1.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target name="Arr">
+        <java classname="array.Arr" failonerror="true" fork="yes">
+            <classpath refid="run.Arr.classpath"/>
+        </java>
+    </target>
+    <target name="B">
+        <java classname="sum.B" failonerror="true" fork="yes">
+            <classpath refid="run.B.classpath"/>
+        </java>
+    </target>
+    <target name="Fileread">
+        <java classname="fileread.Fileread" failonerror="true" fork="yes">
+            <classpath refid="run.Fileread.classpath"/>
+        </java>
+    </target>
+    <target name="Filereader">
+        <java classname="filereader.Filereader" failonerror="true" fork="yes">
+            <classpath refid="run.Filereader.classpath"/>
+        </java>
+    </target>
+    <target name="m2">
+        <java classname="month.m2" failonerror="true" fork="yes">
+            <classpath refid="run.m2.classpath"/>
+        </java>
+    </target>
+    <target name="StuddentPercentage">
+        <java classname="w.StuddentPercentage" failonerror="true" fork="yes">
+            <classpath refid="run.StuddentPercentage.classpath"/>
+        </java>
+    </target>
+    <target name="Sum">
+        <java classname="sum.Sum" failonerror="true" fork="yes">
+            <classpath refid="run.Sum.classpath"/>
+        </java>
+    </target>
+    <target name="T1">
+        <java classname="triangle.T1" failonerror="true" fork="yes">
+            <classpath refid="run.T1.classpath"/>
+        </java>
+    </target>
+    <target name="TC_02">
+        <java classname="login.TC_02" failonerror="true" fork="yes">
+            <classpath refid="run.TC_02.classpath"/>
+        </java>
+    </target>
+</project>
