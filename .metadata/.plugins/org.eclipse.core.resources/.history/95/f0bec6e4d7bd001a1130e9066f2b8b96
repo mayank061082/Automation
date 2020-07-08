@@ -1,0 +1,40 @@
+package testcase;
+
+//import org.testng.annotations.Ignore;
+//import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import base.LauchBrowser;
+import common.LoginPage;
+import common.RegistrationPage;
+
+public class TC_001 {
+	LauchBrowser lb=new LauchBrowser();
+	
+	
+	@Test(priority=1)
+	public void tc_001()
+	{		
+		
+		LoginPage lp=new LoginPage();
+		lp.userName("log_mayank@rediff.com");
+		lp.enterPassword("Prayan@0207");
+		lp.clickButton();
+		lb.closeBrowser();
+		
+		
+	}
+	@Test(priority=0)
+	public void tc_002()
+	{		
+		lb.openBrowser();
+		RegistrationPage rp=new RegistrationPage();		
+		rp.registrationFirstname("Prayan");
+		rp.registrationLastname("Srivastava");	
+		
+		
+		
+	}
+	
+
+}

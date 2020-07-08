@@ -6,12 +6,12 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 public class TC_001Registration {
-	public  static ChromeDriver driver;
+	  ChromeDriver driver;
 	
 	@Test
 	public void Registration() throws InterruptedException
 	{
-		System.setProperty("webdriver.chroe.driver", "./Driver/chrome.exe");
+		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
 		driver= new ChromeDriver();
         Thread.sleep(2000);
 		driver.get("http://newtours.demoaut.com/");

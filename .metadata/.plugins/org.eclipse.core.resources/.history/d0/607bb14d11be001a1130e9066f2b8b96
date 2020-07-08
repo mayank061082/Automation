@@ -1,0 +1,44 @@
+package common;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.Select;
+
+import base.LauchBrowser;
+
+public class RegistrationPage  extends LauchBrowser{
+	
+	
+	public void registrationFirstname(String firstname)
+	{
+		driver.findElement(By.xpath("//input[@name='firstname']")).sendKeys(firstname);
+	}
+	public void registrationLastname(String lastname)
+	{
+		driver.findElement(By.xpath("//input[@name='lastname']")).sendKeys(lastname);
+	}
+	public void email(String Email)
+	{
+		driver.findElement(By.xpath("//div[@class='uiStickyPlaceholderInput uiStickyPlaceholderEmptyInput']/div/input")).sendKeys(Email);
+	}
+	public void newPassword(String NPassword)
+	{
+		driver.findElement(By.xpath("//input[@type='Password' or @name='reg_passwd__']")).sendKeys(NPassword);
+	}
+	public void dateOfBirth()
+	{
+		Select db=new Select(driver.findElement(By.xpath("//select[@id='day']")));
+		db.selectByVisibleText("2");
+		
+	
+		Select dm=new Select(driver.findElement(By.xpath("//select[@id='month']")));
+		dm.selectByVisibleText("Jul");
+		
+		Select dy=new Select(driver.findElement(By.xpath("//select[@id='year']")));
+		dy.selectByVisibleText("2015");
+		
+	}
+	
+		
+		
+	}
+

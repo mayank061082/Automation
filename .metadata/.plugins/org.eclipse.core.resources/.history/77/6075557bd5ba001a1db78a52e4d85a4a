@@ -1,0 +1,35 @@
+package common;
+
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.util.Properties;
+import java.util.ResourceBundle;
+
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.*;
+
+
+public class LoginPage{
+	
+	ChromeDriver driver;
+	ResourceBundle rb;
+	private String Browser;
+	private String Application_URL;
+	
+	@BeforeMethod
+	public void openBrowser() 
+	{
+		rb=ResourceBundle.getBundle("config");		
+		//String Browser;
+		rb.getString(Browser);
+		System.setProperty("webdriver.driver.chrome", ".//Driver/chromedriver.exe");
+		driver=new ChromeDriver();
+		driver.get(rb.getString(Application_URL));
+		}
+				
+			
+	
+	
+
+}

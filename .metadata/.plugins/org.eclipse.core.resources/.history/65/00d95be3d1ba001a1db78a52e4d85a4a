@@ -1,0 +1,36 @@
+package common;
+
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.util.Properties;
+import java.util.ResourceBundle;
+
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.*;
+
+public class LoginPage{
+	
+	ChromeDriver driver;
+	ResourceBundle rb;
+	
+	@BeforeMethod
+	public void openBrowser(ChromeDriver driver) 
+	{
+		this.driver=driver;
+		rb=ResourceBundle.getBundle("config");
+		if{
+		rb.getString(Browser).equalsIgnoreCase("chrome");
+		System.setProperty("webdriver.driver.chrome", ".//Driver/chromedriver.exe");
+		driver.get(rb.getString(Application_URL));
+		}
+		else
+		{
+		System.out.println("Properties not matched");
+		}
+		
+			}
+	
+	
+
+}

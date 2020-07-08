@@ -1,0 +1,17 @@
+package common;
+
+import org.openqa.selenium.By;
+
+import base.LauchBrowser;
+
+public class RegistrationPage  extends LauchBrowser{
+	
+	public void registrationFirstname(String firstname)
+	{
+		driver.findElement(By.xpath("//input[@name='firstname']")).sendKeys(firstname);
+	}
+	public void registrationLastname(String lastname)
+	{
+		driver.findElement(By.xpath("//input[@name='lastname']")).sendKeys(lastname);
+	}
+}

@@ -22,6 +22,7 @@ public class Resources {
 	public static Properties AppText = new Properties();
 	public static Xls_Reader SuiteData;
 	public static Xls_Reader TestStepData;
+	public static Xls_
 
 	public static String keyword;
 	public static String webElement;
