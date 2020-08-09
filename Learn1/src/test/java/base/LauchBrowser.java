@@ -23,7 +23,7 @@ public class LauchBrowser {
 	@AfterMethod
 	public void closeBrowser()
 	{
-		driver.close();
+		//driver.close();
 		driver.quit();
 	}
 

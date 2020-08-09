@@ -2,6 +2,25 @@
 <section name="Workbench">
 	<section name="org.eclipse.m2e.core.pom.dependencies">
 	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
 	<section name="org.eclipse.m2e.core.pom.overview">
 		<list key="ciManagementUrl">
 		</list>
@@ -20,21 +39,108 @@
 	</section>
 	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
 		<item value="480" key="width"/>
-		<item value="449" key="x"/>
-		<item value="18" key="y"/>
+		<item value="823" key="x"/>
+		<item value="13" key="y"/>
 		<item value="531" key="height"/>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item value="All Catalogs" key="catalog"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
 	</section>
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="drivendata"/>
+			<item value="DataDriven"/>
 			<item value="org.Excel"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="drivendata"/>
+			<item value="DataDriven"/>
 			<item value="org.Excel"/>
 		</list>
 		<list key="version">
 			<item value="0.0.1-SNAPSHOT"/>
 		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="F:\RoboticFramework\AutomationCode\reverse\src\reversestring\ReverseString.java"/>
+			<item value="F:\RoboticFramework\AutomationCode\api\src\test\java\apiBdd\GetBdd.java"/>
+			<item value="F:\RoboticFramework\AutomationCode\APIAutomation"/>
+			<item value="F:\RoboticFramework\AutomationCode\APIAutomation\src\test\java\automataionAPI\ApiAutomate.java"/>
+			<item value="F:\RoboticFramework\AutomationCode\APIAutomation\pom.xml"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="CucumberPOM.POMNaveen"/>
+			<item value="CucumberNaveenAutomation.CucumbernaveenAutomation"/>
+			<item value="appium.appium"/>
+			<item value="getApiBDD.api"/>
+			<item value="getApiBDD.bddApi"/>
+			<item value="getApiBDD.BDDget"/>
+			<item value="API.GET.apiGetbdd"/>
+			<item value="API.GET.get"/>
+			<item value="API.GET.API.GET"/>
+			<item value="DataDriven.data"/>
+			<item value="DataDriven.dataDriven"/>
+			<item value="DataDriven.DataDrivenAutomation"/>
+		</list>
+		<list key="groupId">
+			<item value="CucumberPOM"/>
+			<item value="CucumberNaveenAutomation"/>
+			<item value="appium"/>
+			<item value="getApiBDD"/>
+			<item value="API.GET"/>
+			<item value="DataDriven"/>
+		</list>
+		<list key="artifactId">
+			<item value="POMNaveen"/>
+			<item value="CucumbernaveenAutomation"/>
+			<item value="appium"/>
+			<item value="api"/>
+			<item value="bddApi"/>
+			<item value="BDDget"/>
+			<item value="apiGetbdd"/>
+			<item value="get"/>
+			<item value="API.GET"/>
+			<item value="data"/>
+			<item value="dataDriven"/>
+			<item value="DataDrivenAutomation"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.editor.dialogs.ManageDependenciesDialog">
+		<item value="657" key="width"/>
+		<item value="355" key="x"/>
+		<item value="69" key="y"/>
+		<item value="450" key="height"/>
 	</section>
 </section>

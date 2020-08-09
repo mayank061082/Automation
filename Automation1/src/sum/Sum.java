@@ -11,7 +11,7 @@ public void a1(int a)
          {
         	j=a*i; 
         	 
-        	 if(j%2!=0)
+        	 if(j%2==0 || j%2!=0)
         	 {
         		 System.out.println("   Tables is:-" +j);
         		 System.out.println("Odd Number");

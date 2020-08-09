@@ -1,0 +1,32 @@
+package filereader;
+
+import java.lang.*;
+
+abstract class ED1 {
+	int age;
+	String name;
+	
+	public ED1(String name, int age) {
+
+		this.name=name;
+		this.age=age;
+		System.out.println("calling constructor");
+	}
+		public ED1() {
+			
+			System.out.println("inner cons");
+			
+			
+		
+		
+	}
+
+	public static void main(String[] args) {
+		ED1 e=new ED1("mayank",23);
+		ED1 e1=new ED1();
+		
+	}
+
+
+
+}

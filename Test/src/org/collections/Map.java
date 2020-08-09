@@ -7,11 +7,16 @@ public class Map {
 	
 	public void map1()
 	{
-		HashMap<Integer,Integer> hp=new HashMap<Integer,Integer>();
-		hp.put(1, 2);
+		HashMap<String,String> hp=new HashMap<String,String>();
+		hp.put("Mayank","Sri");
 		//hp.put("hello", 1);
 		//hp.put(2, "rahul");
-		System.out.println(hp.getOrDefault(9,(int)'e'));
+		//System.out.println(hp.getOrDefault(9,10));
+		hp.forEach((k,v) -> System.out.println("Key = "
+                + k + ", Value = " + v));
+		
+		
+	
 	}
 
 }

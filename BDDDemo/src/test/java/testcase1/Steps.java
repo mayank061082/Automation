@@ -1,5 +1,7 @@
 package testcase1;
 
+import java.util.concurrent.TimeUnit;
+
 import org.junit.Assert;
 //import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,7 +13,7 @@ public class Steps {
 	ChromeDriver  driver;
 	@Given("^open URL and open Sign in screen$")
 	public void open_URL_and_open_Sign_in_screen() {
-		System.setProperty("webdriver.chroe.driver", "./Driver/chrome.exe");
+		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
 		driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.facebook.com");
@@ -23,7 +25,8 @@ public class Steps {
 
 	@When("^enter Username$")
 	public void enter_Username() throws InterruptedException {
-		Thread.sleep(2000);
+		driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
+		//Thread.sleep(2000);
 		driver.findElementById("email").sendKeys("mayank061082");
 		
 	    
@@ -32,7 +35,7 @@ public class Steps {
 	@When("^enter Password$")
 	public void enter_Password() throws InterruptedException {
 	    Thread.sleep(2000);
-		driver.findElementByName("pass").sendKeys("jaimatadii");
+		driver.findElementByName("pass").sendKeys("prayan@0207");
 	
 	}
 
@@ -48,6 +51,9 @@ public class Steps {
 	    
 	}
 
-
+	@Then("^user close browser$")
+	public void user_close_browser() {
+	   driver.close();
+	}
 
 }

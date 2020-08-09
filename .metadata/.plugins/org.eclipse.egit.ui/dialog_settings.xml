@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="GitCommitMessageComponent">
+		<list key="F:\RoboticFramework\AutomationCode\.git">
+			<item value="false"/>
+			<item value="mayank srivastava &lt;mayank061082@gmail.com&gt;"/>
+			<item value="t"/>
+			<item value="mayank srivastava &lt;mayank061082@gmail.com&gt;"/>
+			<item value="f1bba85a689375e76ab564471fc8181a2cc47140"/>
+		</list>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
+		<item value="200,200" key="STAGING_SASH_FORM_WEIGHT"/>
+		<item value="false" key="sortItemState"/>
+		<item value="200,200" key="HORIZONTAL_SASH_FORM_WEIGHT"/>
+	</section>
+</section>

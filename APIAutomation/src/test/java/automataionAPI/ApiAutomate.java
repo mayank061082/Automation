@@ -28,7 +28,7 @@ public class ApiAutomate {
 		public void PostMethod(){
 			RestAssured.baseURI="http://restAPI.demoqa.com/utilities/weather/city";			
 			RequestSpecification hr=RestAssured.given();
-			Response rs=hr.request(Method.GET,"Mumbai");
+			Response rs=hr.request(Method.PATCH,"Mumbai");
 			String s=rs.getBody().asString();
 			System.out.println("Responce body :"+s);
 			int Statuscode=rs.getStatusCode();

@@ -1,0 +1,19 @@
+
+public class Example1 {
+	
+	public Example1(){
+		System.out.println("construncter");
+		public Example1(){
+			System.out.println("inner constructro");
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		Example1 e = new Example1();
+		
+		
+
+	}
+
+}

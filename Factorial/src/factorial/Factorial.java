@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Factorial {
 	public static void main(String[] args) {
-	java.util.Scanner input = new java.util.Scanner(System.in);
+	Scanner input = new java.util.Scanner(System.in);
 	String userName;
 	final int validLength = 6; // This is the valid length of an user name
 
@@ -17,6 +17,7 @@ public class Factorial {
 	    // If the user enters less than validLength characters
 	    // ask for entering again
 	    System.out.println("\nUsername needs to be " + validLength + " character long");
+	    //break;
 
 	   // System.out.print("\nPlease enter the username again: ");
 	 //   userName = input.nextLine();
