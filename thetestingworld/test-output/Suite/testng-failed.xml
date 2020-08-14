@@ -10,9 +10,7 @@
     <classes>
       <class name="thetestingworld.browser.OpenBrowser">
         <methods>
-          <include name="closebrowser"/>
           <include name="title"/>
-          <include name="openbrowser"/>
         </methods>
       </class> <!-- thetestingworld.browser.OpenBrowser -->
     </classes>

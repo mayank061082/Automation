@@ -7,8 +7,8 @@
     
    <run>
    <include name="Reg"></include>
-    </run>
-    </groups>
+   </run>
+  </groups>
     
     <packages>
     <package name="thetestingworld.browser"></package>

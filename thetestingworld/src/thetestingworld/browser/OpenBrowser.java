@@ -6,11 +6,11 @@ import org.testng.annotations.*;
 
 public class OpenBrowser {
 	public WebDriver driver;
-	@BeforeMethod(alwaysRun=true)
+	@BeforeMethod
 	public void openbrowser()
 	{
 		driver =new ChromeDriver();
-		System.setProperty("chrome.webdriver.driver", ".//Driver/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", ".//Driver/chromedriver.exe");
 		driver.navigate().to("http://www.thetestingworld.com");		
 	}
 	
@@ -37,7 +37,7 @@ public class OpenBrowser {
 			
 	}
 
-	@AfterMethod(alwaysRun=true)
+	@AfterMethod
 	public void closebrowser()
 	{
 		driver.close();
