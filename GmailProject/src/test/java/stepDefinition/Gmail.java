@@ -91,6 +91,7 @@ public class Gmail {
 		screen.wait(cmsc.getToTxtBx(), 10);
 		screen.type(cmsc.getToTxtBx(), email);
 
+
 	}
 
 	@When("^Add Subject as \"([^\"]*)\"$")

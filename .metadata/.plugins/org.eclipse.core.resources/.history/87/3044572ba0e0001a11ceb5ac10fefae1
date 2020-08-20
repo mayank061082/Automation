@@ -1,0 +1,63 @@
+package pageObjects;
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+//import org.openqa.selenium.support.ui.ExpectedConditions;
+//import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import utils.Base;
+
+public class GoogleSearch extends Base {
+	//WebDriverWait wait = new WebDriverWait(driver, 79);
+	
+	@Test
+	public void search() throws Exception{
+		
+		driver.get("http://www.google.com/");		
+		
+	    driver.findElement(By.xpath("//input[@class='gLFyf gsfi']")).sendKeys("postman");
+		//wait.(elementIdentified(By.xpath("//input[@class='gLFyf gsfi']")).sendKeys("postman"));
+	    driver.manage().timeouts().implicitlyWait(800, TimeUnit.SECONDS);
+		
+	   List <WebElement>li = driver.findElements(By.xpath("//ul[@role='listbox']//li/descendant::div/div/span/b[contains(text(),'')]"));
+	   System.out.println("Search Elements text >>>>"+li.size());
+	   
+	   driver.manage().timeouts().implicitlyWait(800, TimeUnit.SECONDS);
+	   for(int i=0;i<li.size();i++){
+		 
+		   System.out.println(li.get(i).getText());
+		   System.out.println("yaha tak aa gaya 1");  		   
+		   
+	             if(li.get(i).getText().contains("postman chrome")){
+			   
+		           System.out.println("yaha tak aa gaya 2");
+		           li.get(i).click();
+		           System.out.println("yaha tak aa gaya 2a");
+		          //driver.manage().timeouts().implicitlyWait(700, TimeUnit.SECONDS);
+		            System.out.println("yaha tak aa gaya 3");
+			   
+	             }
+		   String ExpTitle="postman -Google Search";
+		   String Title=driver.getTitle();
+			System.out.println(Title);
+			 System.out.println("yaha tak aa gaya 4");
+			   
+			 if(driver.getTitle().equalsIgnoreCase(ExpTitle))
+			{
+				Assert.assertTrue(true, "TiTle Matached TEst case passed");
+				System.out.println("Page Title is matach Hence URL is correct");
+			}else
+			{
+				Assert.assertFalse(false, "Wrong URL becoz title not matched");
+				System.out.println("Wrong URL");
+			}
+			   }
+			   
+	   }}
+	
+
+

@@ -1,0 +1,27 @@
+package PageObjects;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class SearchPage {
+	//@FindBy(xpath = "//input[@class='react-autosuggest__input react-autosuggest__input--open']")
+	@FindBy(xpath = "//div[contains(@class,'fsw_inputBox searchCity inactiveWidget')]")
+	private WebElement searchFrom;
+	
+	@FindBy(xpath = "//div[contains(@class,'fsw_inputBox searchToCity inactiveWidget')]")  //input[@id='toCity']")
+	private WebElement searchTo;
+
+	public SearchPage(WebDriver driver){	
+	PageFactory.initElements(driver, this);
+		}
+	public WebElement searchFrom(){
+		return searchFrom;
+		
+	}
+	public WebElement searchTo(){
+		return searchTo;
+		
+	}
+}

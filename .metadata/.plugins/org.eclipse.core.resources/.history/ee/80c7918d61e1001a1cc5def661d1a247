@@ -1,0 +1,16 @@
+package StepDefnition;
+
+import org.openqa.selenium.WebDriver;
+
+import io.cucumber.java.Before;
+import utils.Base;
+
+public class Hooks {
+public WebDriver driver;
+	
+	@Before
+	public void beforeScenario() {
+		driver = Base.getDriver();
+	}
+	
+}

@@ -1,0 +1,85 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-08-18T13:47:45.639Z",
+        "line": 3,
+        "name": "I\twant to launch MMT App",
+        "description": "",
+        "id": "search-flights-for-mmt;i-want-to-launch-mmt-app",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\r\n\tat StepDefnition.FlightSearch.user_is_already_on_Make_my_Trip_Home_page(FlightSearch.java:23)\r\n\tat ✽.user is already on Make my Trip Home page(file:///F:/RoboticFramework/AutomationCode/Automate/features/Searchflight.feature:4)\r\n",
+              "duration": 49000000,
+              "status": "failed"
+            },
+            "line": 4,
+            "name": "user is already on Make my Trip Home page",
+            "match": {
+              "location": "StepDefnition.FlightSearch.user_is_already_on_Make_my_Trip_Home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "skipped"
+            },
+            "line": 5,
+            "name": "I Search Start destination  as \"Mumbai\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Mumbai",
+                  "offset": 32
+                }
+              ],
+              "location": "StepDefnition.FlightSearch.i_Search_Start_destination_as(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "Search\tfinal destination  as \"GOA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "GOA",
+                  "offset": 30
+                }
+              ],
+              "location": "StepDefnition.FlightSearch.search_final_destination_as(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "close the Browser",
+            "match": {
+              "location": "StepDefnition.FlightSearch.close_the_Browser()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Search Flights for MMT",
+    "description": "",
+    "id": "search-flights-for-mmt",
+    "keyword": "Feature",
+    "uri": "file:features/Searchflight.feature",
+    "tags": []
+  }
+]

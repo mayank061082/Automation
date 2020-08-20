@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="1.059">
+<testcase classname="Search Flights for MMT" name="I&#9;want to launch MMT App" time="0.23">
+<failure message="" type="java.lang.NullPointerException"><![CDATA[Given user is already on Make my Trip Home page.............................failed
+When I Search Start destination  as "Mumbai"................................skipped
+And Search	final destination  as "GOA"......................................skipped
+And close the Browser.......................................................skipped
+
+StackTrace:
+java.lang.NullPointerException
+	at StepDefnition.FlightSearch.user_is_already_on_Make_my_Trip_Home_page(FlightSearch.java:23)
+	at ✽.user is already on Make my Trip Home page(file:///F:/RoboticFramework/AutomationCode/Automate/features/Searchflight.feature:4)
+]]></failure>
+</testcase>
+</testsuite>

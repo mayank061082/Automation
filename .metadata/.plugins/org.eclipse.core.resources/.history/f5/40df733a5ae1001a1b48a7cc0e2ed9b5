@@ -1,0 +1,7 @@
+Feature: Search Flights for MMT
+
+Scenario: I	want to launch MMT App
+Given user is already on Home page
+When I Search Start destination  as "Mumbai"
+And Search	final destination  as "GOA"
+And close the Browser

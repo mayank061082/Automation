@@ -1,0 +1,8 @@
+#Search Flights from and To destination
+Feature: Search Flights for MMT
+
+Background: User Launch App 
+Given I navigate to the Make my Trip Home page
+When I Search Start destination from as	"Mumbai"
+And Search	final destination To as "Goa"
+And close the Browser

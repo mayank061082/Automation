@@ -1,0 +1,53 @@
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:features/Searchflight.feature");
+formatter.feature({
+  "name": "Search Flights for MMT",
+  "description": "",
+  "keyword": "Feature"
+});
+formatter.scenario({
+  "name": "I\twant to launch MMT App",
+  "description": "",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "name": "user is already on Make my Trip Home page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefnition.FlightSearch.user_is_already_on_Make_my_Trip_Home_page()"
+});
+formatter.result({
+  "error_message": "java.lang.NullPointerException\r\n\tat StepDefnition.FlightSearch.user_is_already_on_Make_my_Trip_Home_page(FlightSearch.java:23)\r\n\tat ✽.user is already on Make my Trip Home page(file:///F:/RoboticFramework/AutomationCode/Automate/features/Searchflight.feature:4)\r\n",
+  "status": "failed"
+});
+formatter.step({
+  "name": "I Search Start destination  as \"Mumbai\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "StepDefnition.FlightSearch.i_Search_Start_destination_as(java.lang.String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "Search\tfinal destination  as \"GOA\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDefnition.FlightSearch.search_final_destination_as(java.lang.String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "close the Browser",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDefnition.FlightSearch.close_the_Browser()"
+});
+formatter.result({
+  "status": "skipped"
+});
+});

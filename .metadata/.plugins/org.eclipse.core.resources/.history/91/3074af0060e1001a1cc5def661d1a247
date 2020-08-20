@@ -1,0 +1,49 @@
+
+
+/* Create Flight Search file with step 
+ * definiantion "Automate" project name 
+ */
+package StepDefnition;
+
+//import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+
+import PageObjects.SearchPage;
+import Utils.Base;
+//import cucumber.api.java.en.*;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
+
+
+public class FlightSearch extends Base{
+	//WebDriver driver ;
+	SearchPage sp = new SearchPage(driver);
+	
+	
+	@Given("^user is already on Home page$")
+	public void user_is_already_on_Home_page() {
+		driver.manage().deleteAllCookies();
+		driver.get("https://www.makemytrip.com/");
+		
+		driver.switchTo().alert().dismiss();    
+	}
+
+	@When("^I Search Start destination  as \"([^\"]*)\"$")
+	public void i_Search_Start_destination_as(String arg1) throws Throwable {
+	sp.searchFrom().sendKeys("Mumbai");
+	}
+
+	@When("^Search	final destination  as \"([^\"]*)\"$")
+	public void search_final_destination_as(String arg1) throws Throwable {
+	
+	sp.searchTo().sendKeys("Goa");
+	    
+	}
+
+	@When("^close the Browser$")
+	public void close_the_Browser() throws Throwable {
+		driver.close();
+	    
+	}
+
+}

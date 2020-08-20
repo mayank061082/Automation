@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class MissingArray {
 
 	public static void main(String[] args) {
-		int[] array={1,2,4,5,6};
-		int missingno=getmissingno(array, 76);
+		int[] array={1,2,4,5,6,7,8,10};
+		int missingno= getmissingno(array,10);
 		System.out.printf("the missing number in array %s is %d %n",Arrays.toString(array),missingno);
 		
 		

@@ -1,0 +1,71 @@
+
+
+/* Create Flight Search file with step 
+ * definiantion "Automate" project name 
+ */
+package StepDefnition;
+
+
+import java.util.concurrent.TimeUnit;
+
+//import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.WebDriver;
+
+import PageObjects.SearchPage;
+import Utils.Base;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
+
+
+public class FlightSearch {
+	WebDriver driver= Base.driver;
+	SearchPage sp = new SearchPage(driver);
+	//Screen screen = new Screen();
+	
+	
+	@Given("^user is already on Home page$")
+    public void user_is_already_on_home_page() throws Throwable {
+		driver.get("https://www.makemytrip.com/");
+		driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
+
+
+    }
+
+    @When("^Search Start destination as \"([^\"]*)\"$")
+    public void search_start_destination_as_something(String strArg1) throws Throwable {
+    	sp.getSearchFrom().click();
+    	sp.getFromtextBx().sendKeys(strArg1);
+    	sp.getFirstSelection().click();
+    	
+    }
+
+    @And("^Search final destination as \"([^\"]*)\"$")
+    public void search_final_destination_as_something(String strArg1) throws Throwable {
+    	sp.getSearchFrom().click();
+    	sp.getTotextBx().sendKeys(strArg1);
+    	sp.getFirsttoSelection().click();
+    }
+
+    @And("^close the Browser$")
+    public void close_the_browser() throws Throwable {
+    	driver.close();
+    }
+	
+	
+}
+
+
+
+
+
+
+
+
+/* List<WebElement> myList=new WebDriverWait(driver, 20)
+.until(ExpectedConditions.elementToBeClickable(sp.searchFrom().sendKeys("M")));
+List<WebElement> myList = new WebDriverWait(driver, 20)
+		.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("Xpath of the dynamic drop down")));
+for (WebElement element:myList) {
+         if(element.getText().contains("Mumbai"));
+         element.click();*/

@@ -73,6 +73,8 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="F:\RoboticFramework\AutomationCode\GmailProject\src\test\java\pageObjects\GmailHomePage.java"/>
+			<item value="F:\RoboticFramework\AutomationCode\thetestingworld\src\thetestingworld\browser\OpenBrowser.java"/>
 			<item value="F:\RoboticFramework\AutomationCode\reverse\src\reversestring\ReverseString.java"/>
 			<item value="F:\RoboticFramework\AutomationCode\api\src\test\java\apiBdd\GetBdd.java"/>
 			<item value="F:\RoboticFramework\AutomationCode\APIAutomation"/>
@@ -90,6 +92,9 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="org.MakeMyTrip.automate"/>
+			<item value="org.MakeMyTrip.Automate"/>
+			<item value="GoogleSearch.Google"/>
 			<item value="CucumberPOM.POMNaveen"/>
 			<item value="CucumberNaveenAutomation.CucumbernaveenAutomation"/>
 			<item value="appium.appium"/>
@@ -104,6 +109,8 @@
 			<item value="DataDriven.DataDrivenAutomation"/>
 		</list>
 		<list key="groupId">
+			<item value="org.MakeMyTrip"/>
+			<item value="GoogleSearch"/>
 			<item value="CucumberPOM"/>
 			<item value="CucumberNaveenAutomation"/>
 			<item value="appium"/>
@@ -112,6 +119,9 @@
 			<item value="DataDriven"/>
 		</list>
 		<list key="artifactId">
+			<item value="automate"/>
+			<item value="Automate"/>
+			<item value="Google"/>
 			<item value="POMNaveen"/>
 			<item value="CucumbernaveenAutomation"/>
 			<item value="appium"/>
@@ -138,7 +148,7 @@
 		</list>
 	</section>
 	<section name="org.eclipse.m2e.editor.dialogs.ManageDependenciesDialog">
-		<item value="657" key="width"/>
+		<item value="727" key="width"/>
 		<item value="355" key="x"/>
 		<item value="69" key="y"/>
 		<item value="450" key="height"/>

@@ -1,0 +1,74 @@
+
+
+/* Create Flight Search file with step 
+ * definiantion "Automate" project name 
+ */
+package StepDefnition;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.sikuli.script.Screen;
+
+//import org.testng.annotations.Test;
+
+import PageObjects.SearchPage;
+import Utils.Base;
+//import cucumber.api.java.en.*;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
+
+
+public class FlightSearch {
+	WebDriver driver= Base.driver;
+	SearchPage sp = new SearchPage(driver);
+	Screen screen = new Screen();
+	
+	
+	@Given("^user is already on Home page$")
+	public void user_is_already_on_Home_page() throws Exception {
+		driver.manage().deleteAllCookies();
+		driver.navigate().refresh();
+		driver.get("https://www.makemytrip.com/");
+		
+		Thread.sleep(2000);
+		
+		driver.switchTo().alert().dismiss();    
+	}
+
+	@When("^I Search Start destination  as \"([^\"]*)\"$")
+	public void i_Search_Start_destination_as(String arg1) throws Throwable {
+		sp.searchFrom();
+		screen.click();
+		
+	/*List<WebElement> myList=new WebDriverWait(driver, 20)
+	.until(ExpectedConditions.elementToBeClickable(sp.searchFrom().sendKeys("M")));
+				/*List<WebElement> myList = new WebDriverWait(driver, 20)
+						.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("Xpath of the dynamic drop down")));
+				for (WebElement element:myList) {
+				         if(element.getText().contains("Mumbai"));
+				         element.click();*/
+				    }
+	//sp.searchFrom().clear();
+	//sp.searchFrom().click();
+	//sp.searchFrom().sendKeys("Mumbai");
+	
+
+	@When("^Search	final destination  as \"([^\"]*)\"$")
+	public void search_final_destination_as(String arg1) throws Throwable {
+	
+	((WebElement) sp.searchTo()).sendKeys("Goa");
+	    
+	}
+
+	@When("^close the Browser$")
+	public void close_the_Browser() throws Throwable {
+		driver.close();
+	    
+	}
+
+}

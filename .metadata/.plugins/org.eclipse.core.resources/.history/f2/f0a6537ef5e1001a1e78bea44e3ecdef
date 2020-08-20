@@ -1,0 +1,30 @@
+package PageObjects;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.sikuli.script.Pattern;
+
+public class SearchPage {
+	//@FindBy(xpath = "//input[@id='gosuggest_inputSrc']")
+	//@FindBy(xpath = "//div[contains(@class,'fsw_inputBox searchCity inactiveWidget')]")
+	private Pattern searchFrom =new Pattern("./logo/MMTFrom.png");
+	private Pattern searchTo =new Pattern("./logo/MMTTO.png");
+	
+	//@FindBy(xpath = "//div[contains(@class,'fsw_inputBox searchToCity inactiveWidget')]")  
+	//@FindBy(xpath = "//input[@id='gosuggest_inputDest']")
+	//private WebElement searchTo;
+
+	public SearchPage(WebDriver driver){	
+	PageFactory.initElements(driver, this);
+		}
+	public Pattern searchFrom(){
+		return searchFrom;
+		
+	}
+	public Pattern searchTo(){
+		return searchTo;
+		
+	}
+}
